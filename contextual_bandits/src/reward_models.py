@@ -21,14 +21,14 @@ def train_reward_models(X, A, R, weights=None):
     return model_ad, model_no_ad
 
 
-def predict_policy(model_ad, model_no_ad, user_features):
+def should_show_ad(reward_model_ad, reward_model_no_ad, user_features):
     """
     Given trained models and user_features, return a binary policy decision:
     show_ad = 1 if predicted_reward_if_ad > predicted_reward_if_no_ad else 0
     """
     pred_if_ad, pred_if_no_ad = expected_reward(
-        model_ad=model_ad,
-        model_no_ad=model_no_ad,
+        model_ad=reward_model_ad,
+        model_no_ad=reward_model_no_ad,
         user_features=user_features)
     return (pred_if_ad > pred_if_no_ad).astype(int)
 
