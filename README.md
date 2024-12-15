@@ -1,6 +1,6 @@
 # ad-placement-rl
 
-Using machine learning to decide when to take an action like showing ad at the beginning of a video recommendation feed.
+Using machine learning to decide when to take an action like showing ad at the beginning of a recommendation feed.
 
-- [contextual-bandit](contextual_bandits/README.md)
+- [contextual_bandits](contextual_bandits/README.md)
 - [reinforce_policy](reinforce_policy/README.md)
